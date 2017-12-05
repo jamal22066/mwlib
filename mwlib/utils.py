@@ -19,7 +19,7 @@ import UserDict
 
 from mwlib.log import Log
 
-from hashlib import md5
+from hashlib import sha512
 
 # provide all() for python 2.4
 all = all
