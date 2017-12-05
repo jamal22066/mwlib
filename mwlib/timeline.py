@@ -9,7 +9,7 @@
 import os
 import tempfile
 import subprocess
-from hashlib import md5
+from hashlib import sha512
 
 font = None
 
@@ -47,7 +47,7 @@ def drawTimeline(script, basedir=None):
     if basedir is None:
         basedir = _get_global_basedir()
         
-    m=md5()
+    m=sha512()
     m.update(script)
     ident = m.hexdigest()
 
