@@ -64,7 +64,7 @@ def _renderMathBlahtex(latex, output_path, output_mode):
         if output_mode == 'png':
             r = p.getiterator('png')
             if r:
-                png_fn =  r[0].findtext('md5')
+                png_fn =  r[0].findtext('sha512')
                 if png_fn:
                     png_fn = os.path.join(output_path, png_fn + '.png')
                     if os.path.exists(png_fn):
