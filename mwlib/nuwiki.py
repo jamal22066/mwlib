@@ -218,9 +218,9 @@ class nuwiki(object):
                 return None
 
         if 1:
-            from hashlib import md5
+            from hashlib import sha512
             
-            hd = md5(fqname.encode("utf-8")).hexdigest()
+            hd = sha512(fqname.encode("utf-8")).hexdigest()
             ext = os.path.splitext(p)[-1]
             ext = ext.replace(' ', '')
             # mediawiki gives us png's for these extensions. let's change them here.
